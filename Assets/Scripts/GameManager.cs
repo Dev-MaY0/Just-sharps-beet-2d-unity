@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        _audioSource.volume = AudioManager.Instance.volume;
         _audioSource.Play();
         slider.maxValue = _audioSource.clip.length;
         cliearText.SetActive(false);
